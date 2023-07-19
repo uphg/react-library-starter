@@ -2,7 +2,7 @@
 
 Vite + React + TypeScript + MDX
 
-## Project setup
+## 🥭 Project setup
 
 ```bash
 # init

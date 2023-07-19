@@ -1,0 +1,29 @@
+.container {
+  box-shadow: 0 3px 12px #00000012, 0 1px 4px #00000012;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.component {
+  padding: 20px;
+  position: relative;
+}
+
+.code-wrap {
+
+}
+
+.code {
+  & > pre {
+    margin: 0;
+    padding: 20px 0;
+    position: relative;
+    & > code {
+      display: block;
+      padding: 0 24px;
+      width: fit-content;
+      min-width: 100%;
+      overflow: hidden;
+    }
+  }
+}

@@ -2,13 +2,15 @@ import React, { ReactNode } from "react"
 
 type Props = {
   children: ReactNode,
-  onClick?: () => void
+  onClick?: () => void,
+  to?: Object
 }
 
-const Buttton: React.FC<Props> = ({ children, onClick }) => {
+const Link: React.FC<Props> = ({ children, onClick, to }) => {
+  console.log(to)
   return (
     <button onClick={onClick}>{children}</button>
   )
 }
 
-export default Buttton
+export default Link

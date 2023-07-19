@@ -1,0 +1,45 @@
+.container {
+  height: var(--navbar-height);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.body {
+  padding: 0 var(--navbar-padding-size);
+  height: 100%;
+  display: flex;
+}
+
+.prefix {
+  width: calc(var(--sidebar-width) - var(--navbar-padding-size));
+}
+
+.home-link {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.site-name {
+  font-weight: 700;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  height: 100%;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.link {
+  height: 28px;
+  line-height: 28px;
+  border-bottom: 2px solid transparent;
+}
