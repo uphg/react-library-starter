@@ -1,16 +1,15 @@
-import styles from '../styles/sidebar.module.scss'
-import Link from './Link'
+import SidebarItem from './SidebarItem'
 
 const Sidebar = () => {
   return (
-    <div className={styles.container}>
+    <div className="w-[--sidebar-width] fixed top-15 left-0 bottom-0" border-r="1px solid light-700">
       <h2></h2>
-      <div className={styles.links}>
-        <Link to="" className={`sidebar-link ${styles.link}`}>Button 按钮</Link>
-        <Link to="" className={`sidebar-link ${styles.link}`}>Input 输入框</Link>
-        <Link to="" className={`sidebar-link ${styles.link}`}>Switch 开关</Link>
-        <Link to="" className={`sidebar-link ${styles.link}`}>Radio 单选</Link>
-        <Link to="" className={`sidebar-link ${styles.link}`}>Checkbox 多选</Link>
+      <div className="flex flex-col">
+        <SidebarItem to="">Button 按钮</SidebarItem>
+        <SidebarItem to="">Input 输入框</SidebarItem>
+        <SidebarItem to="">Switch 开关</SidebarItem>
+        <SidebarItem to="">Radio 单选</SidebarItem>
+        <SidebarItem to="">Checkbox 多选</SidebarItem>
       </div>
     </div>
   )

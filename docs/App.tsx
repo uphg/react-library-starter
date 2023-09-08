@@ -1,12 +1,9 @@
-import './styles/index.scss'
 import Home from './pages/Home'
-import Start from './pages/start.mdx'
-import { createHashRouter, RouterProvider, RouteObject, redirect, Navigate } from 'react-router-dom'
+import { createHashRouter, RouterProvider, RouteObject } from 'react-router-dom'
 import { ReactNode } from 'react'
 import Content from './components/Content'
 import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar'
-import pageStyles from './styles/page.module.scss'
 import PagesButton from './pages/Button.mdx'
 
 const HomeLayout = ({ children }: { children: ReactNode }) => (
@@ -23,9 +20,9 @@ const PageLayout = ({ children }: { children: ReactNode }) => (
     <Navbar />
     <Sidebar />
     <Content>
-      <div className={pageStyles.container}>
-        <div className={pageStyles.wrap}>
-          <div className={pageStyles.content}>
+      <div className="pl[var(--sidebar-width)]">
+        <div className="">
+          <div className="">
             {children}
           </div>
         </div>
@@ -48,11 +45,8 @@ const router = createHashRouter([{
       <Home />
     </HomeLayout>
   )
-}, {
-  path: '/docs',
-  // Redirect 
-  element: <Navigate to="/docs/button" replace />,
 }, ...createLayoutRouter([
+  { path: '/docs', element: <PagesButton /> },
   { path: '/docs/button', element: <PagesButton /> }
 ])])
 

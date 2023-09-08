@@ -1,0 +1,13 @@
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.shiki {
+  padding: 16px 20px;
+  border-radius: 8px;
+}
+.shiki > code {
+  font-family: 'Consolas';
+}

@@ -1,11 +1,11 @@
-import { useState } from 'react'
+import { ReactNode, useState } from 'react'
 
 const STATUS = {
   HOVERED: 'hovered',
   NORMAL: 'normal',
 }
 
-function Link({ page, children }: any) {
+function Link({ to, children }: { to: string, children: ReactNode }) {
   const [status, setStatus] = useState(STATUS.NORMAL)
 
   const onMouseEnter = () => {
@@ -19,7 +19,7 @@ function Link({ page, children }: any) {
   return (
     <a
       className={status}
-      href={page || '#'}
+      href={to || '#'}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >

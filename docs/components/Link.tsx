@@ -1,15 +1,15 @@
 import { ReactNode } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, NavLinkProps } from 'react-router-dom'
 
 type Props = {
   to: string
-  className?: string
+  className?: NavLinkProps['className']
   children: ReactNode
 }
 
-const Link: React.FC<Props> = ({ to, className, children }) => {
+const Link: React.FC<Props> = ({ to, children, className }) => {
   return (
-    <NavLink className={className ? `link ${className}` : 'link'} to={to}>
+    <NavLink className={className} to={to}>
       {children}
     </NavLink>
   )
